@@ -7,24 +7,30 @@
 
     <!-- Blog Post -->
      @foreach($article as $articles)
+ 
+     
+
     <div class="media">
   <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
   <div class="media-body">
-    <h5 class="mt-0">{{ $articles->title }}</h5>
+    
     
     <p class="lead">
        
-       ارسال شده توسط <a href="#">{{ $articles->user->name }}</a>
+       ارسال شده توسط <a href="#">{{ $articles->user->name}}</a>
         
     </p>
     
     
     <p><span class="glyphicon glyphicon-time"></span> ارسال شده در تاریخ </p>
 
-    <p>{!! $articles->body !!}</p>
+  //  <p>{!! $articles->body !!}</p>
   </div>
 </div>
+   
+
     @endforeach
+
     {{--  <!-- Blog Comments -->
 
           <!-- Comments Form -->

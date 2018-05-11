@@ -19,7 +19,7 @@ protected $table = 'article';
     }
     public function user()
     {
-        return $this->hasMany('App\User','id','article_id');
+        return $this->hasMany('App\User','id','user_id');
     }
     
 }

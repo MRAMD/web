@@ -8,11 +8,10 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{$comments->body}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{$a1=$comments->user_id}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{$a1=$comments->article->name}}</h6>
     <p class="card-text">{{$a2=$comments->article_id}}</p>
-    @foreach($user as $users)
-    {{ $b1=$users->name }}
-    @endforeach
+   
+   
 
     
       {{--  {{$id=$articles->id}}  --}}

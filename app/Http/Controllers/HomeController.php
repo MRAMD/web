@@ -52,6 +52,7 @@ class HomeController extends Controller
 
      public function comment()
     {
+
         $user = DB::table('users')->get();
         $article = DB::table('article')->get();
         $comment = DB::table('comment')->get();
@@ -138,7 +139,8 @@ class HomeController extends Controller
 
       public function showarticle($id)
     {
-        $article = \App\Article::get()->where('id','=',$id);
+        
+        $article = \App\Article::find($id)->get();
         return view('showarticle',['article' => $article ]);
     }
 
