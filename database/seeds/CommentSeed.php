@@ -11,7 +11,7 @@ class CommentSeed extends Seeder
      */
     public function run()
     {
-      factory(App\Comment::class, 10)->create()->each(function ($u) {
+      factory(App\Comment::class, 20)->create()->each(function ($u) {
             $u->comment->save(factory(App\Comment::class)->make());
         });
     }

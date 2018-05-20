@@ -15,7 +15,7 @@ protected $table = 'article';
     
     public function comment()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Comment','article_id','id');
     }
     public function user()
     {

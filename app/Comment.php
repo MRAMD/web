@@ -12,6 +12,10 @@ class Comment extends Model
     ];
    public function article()
   {
-       return $this->belongsTo('App\Article');
+       return $this->belongsTo('App\Article','id','article_id');
+   }
+   public function user()
+  {
+       return $this->belongsTo('App\User','id','user_id');
    }
 }

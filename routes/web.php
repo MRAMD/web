@@ -43,4 +43,7 @@ Route::post('panel/article', 'HomeController@savearticle')->name('savearticle');
 //show single article 
 Route::get('showarticle{id}', 'HomeController@showarticle')->name('show.article',['id']);
 
+//send comment in page show article
+Route::post('showarticle{id}/comment', 'HomeController@sendcomment')->name('send.comment',['id']);
+
 

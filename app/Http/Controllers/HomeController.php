@@ -140,8 +140,23 @@ class HomeController extends Controller
       public function showarticle($id)
     {
         
-        $article = \App\Article::find($id)->get();
+        $article = \App\Article::find($id)->where('id', $id)->get();
         return view('showarticle',['article' => $article ]);
+    }
+
+    public function sendcomment(Request $request , $id)
+    {
+        
+        DB::table('comment')->insert(
+            [
+             'body' =>  $request['body'],
+             'user_id'=>  $request['user_id'],
+             'article_id'=>  $request['article_id'],
+             'replay'=> $request['body'],
+             ]);
+             $article = \App\Article::find($id)->where('id', $id)->get();
+         
+        return view('showarticle',[  'article' => $article ]);
     }
 
 
